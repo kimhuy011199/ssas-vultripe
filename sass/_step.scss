@@ -1,0 +1,74 @@
+.step {
+  background-color: $color-grey-4;
+  padding-top: 10rem;
+  padding-bottom: 25rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding-top: 7rem;
+    padding-bottom: 22rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      gap: 1rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0rem;
+      margin-top: 3rem;
+    }
+  }
+
+  &__box {
+    background-color: $color-white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 3.5rem 2.5rem;
+    margin-top: 5rem;
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 3rem 2rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__box:hover {
+    transform: translateY(-1rem);
+    box-shadow: $box-shadow-3;
+  }
+
+  &__number {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    font-size: 5.5rem;
+    font-weight: 600;
+    color: $color-secondary;
+    opacity: 0.17;
+  }
+
+  &__para {
+    color: $color-grey-3;
+  }
+
+  &__sub-heading {
+    color: $color-secondary;
+  }
+
+  &__icon {
+    width: 5rem;
+  }
+}

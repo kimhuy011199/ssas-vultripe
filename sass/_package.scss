@@ -1,0 +1,112 @@
+.package {
+  margin-top: -35rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-top: -40rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-top: -37rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    margin-top: -32rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 0 3rem;
+    padding-top: 10rem;
+
+    @media only screen and (max-width: $bp-package) {
+      overflow-x: auto;
+      padding-bottom: 5rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding-left: 1.5rem;
+    }
+  }
+
+  &__container::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &__item {
+    min-width: 20rem;
+    background-color: $color-white;
+    border-radius: 0.7rem;
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    box-shadow: $box-shadow-1;
+
+    @media only screen and (max-width: $bp-package) {
+      min-width: 26rem;
+    }
+  }
+
+  &__icon--top,
+  &__icon--bottom {
+    position: absolute;
+    max-width: 17rem;
+    transition: all 0.3s;
+  }
+
+  &__icon--top {
+    top: -5rem;
+    z-index: 1;
+    opacity: 0;
+    animation: goUp 0.2s linear forwards;
+    animation-delay: calc(var(--order) * 200ms);
+  }
+
+  &__icon--bottom {
+    top: -1rem;
+    opacity: 0;
+    animation: goUp 0.2s linear forwards;
+    animation-delay: calc(var(--order) * 200ms);
+  }
+
+  &__title {
+    margin-top: 14rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__detail {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: $color-grey-3;
+  }
+
+  &__item:hover {
+    transform: translateY(-1rem);
+    box-shadow: $box-shadow-2;
+  }
+
+  &__item:hover &__icon--top {
+    transform: translateY(-1.5rem);
+  }
+}
+
+@keyframes goUp {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}

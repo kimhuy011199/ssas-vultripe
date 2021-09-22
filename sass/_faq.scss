@@ -1,0 +1,42 @@
+.faq {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  &__sub-heading {
+    color: $color-primary;
+  }
+
+  &__container {
+    margin-top: 4.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 3.5rem;
+    }
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    gap: 0.6rem;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 2rem;
+  }
+
+  &__answer {
+    color: $color-grey-3;
+    align-self: start;
+  }
+}

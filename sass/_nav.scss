@@ -1,0 +1,125 @@
+.nav {
+  padding-top: 2.2rem;
+  padding-bottom: 2.2rem;
+  transition: all 0.1s;
+
+  @media only screen and (max-width: $bp-medium) {
+    position: relative;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__color {
+    background-color: $color-grey-1;
+  }
+
+  &__menu-container {
+    cursor: pointer;
+    padding: 1rem;
+    display: none;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
+  &__menu,
+  &__menu--top,
+  &__menu--bottom {
+    opacity: 1;
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 0.2rem;
+    border-radius: 1rem;
+    background-color: $color-white;
+    transition: all 0.3s;
+  }
+
+  &__menu--top {
+    transform-origin: top left;
+  }
+
+  &__menu--bottom {
+    transform-origin: bottom left;
+  }
+
+  &__logo {
+    width: 14rem;
+  }
+
+  &__list {
+    list-style: none;
+
+    @media only screen and (max-width: $bp-medium) {
+      position: absolute;
+      padding: 5rem;
+      padding-bottom: 7rem;
+      top: 7rem;
+      left: -100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      background-color: $color-grey-1;
+      z-index: 1000;
+      transition: all 0.1s;
+    }
+  }
+
+  &__toggle-list {
+    left: 0rem;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 4.5rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      &:not(:last-child) {
+        margin-right: 0rem;
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: $color-white;
+    font-size: 1.4rem;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+
+  &__link:hover,
+  &__link:active {
+    color: $color-secondary;
+  }
+
+  // ANIMATION
+  &__menu-animation {
+    transform: translateX(-5rem);
+    opacity: 0;
+  }
+
+  &__menu--top-animation {
+    transform: rotate(45deg);
+    transform-origin: top left;
+  }
+
+  &__menu--bottom-animation {
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+  }
+}

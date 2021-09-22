@@ -1,0 +1,90 @@
+.metric {
+  background-color: $color-grey-1;
+  clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
+  padding-top: 22rem;
+  padding-bottom: 8rem;
+  margin-top: -15rem;
+  position: relative;
+  overflow: hidden;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding-top: 16rem;
+    padding-bottom: 7rem;
+    clip-path: polygon(0 8%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding-top: 12rem;
+    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  &__img {
+    position: absolute;
+    top: 1%;
+    left: 40%;
+  }
+
+  &__heading {
+    color: $color-white;
+  }
+
+  &__sub-heading {
+    color: $color-secondary;
+  }
+
+  &__description {
+    max-width: 40rem;
+    margin-top: 2rem;
+    color: $color-grey-2;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 10rem;
+    gap: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      column-gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+  }
+
+  &__box {
+    padding: 0.8rem;
+    position: relative;
+  }
+
+  &__box:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -0.8rem;
+    top: 2rem;
+    width: 0.2rem;
+    height: 2.2rem;
+    background-color: $color-primary;
+  }
+
+  &__title {
+    color: $color-secondary;
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__para {
+    color: $color-grey-2;
+  }
+}

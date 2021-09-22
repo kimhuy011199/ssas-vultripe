@@ -1,0 +1,55 @@
+.btn {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50rem;
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 1.3rem;
+  }
+
+  &--outline:link,
+  &--outline:visited {
+    border: 1px solid $color-secondary;
+    color: $color-secondary;
+    transition: 0.3s;
+  }
+
+  &--outline:hover,
+  &--outline:active {
+    border: 1px solid $color-secondary;
+    background-color: $color-secondary;
+    color: $color-grey-1;
+  }
+
+  &--full:link,
+  &--full:visited {
+    background-color: $color-primary;
+    color: $color-white;
+    transition: 0.3s;
+  }
+
+  &--full:hover,
+  &--full:active {
+    background-color: $color-secondary;
+  }
+
+  &--text:link,
+  &--text:visited {
+    padding: 0;
+    color: $color-primary;
+    transition: 0.3s;
+  }
+
+  &--text:link span,
+  &--text:visited span {
+    display: inline-block;
+    transition: all 0.3s;
+  }
+
+  &--text:hover span,
+  &--text:active span {
+    transform: translateX(0.7rem);
+  }
+}
