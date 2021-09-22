@@ -2,6 +2,6 @@
 
 Landing page fully responsive for Vultripe.
 
-Link: [https://ssas-vultripe.netlify.app/](https://ssas-vultripe.netlify.app/).
+Link: [https://sass-vultripe.netlify.app/](https://sass-vultripe.netlify.app/).
 
 Technology: HTML, CSS, Sass.
